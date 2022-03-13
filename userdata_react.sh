@@ -10,7 +10,7 @@ git clone https://github.com/JeremyKuah/smartbankreact-mercury.git
 cd smartbankreact-mercury
 sudo npm install
 
-sudo echo "export const API_URL = 'http://${lb_dns_name}:8080/'" > src/Constants.js
+sudo echo "export const API_URL = 'http://${lb_dns_name}:80/api/'" > src/Constants.js
 
 sudo npm run build
 sudo npm install -g serve
