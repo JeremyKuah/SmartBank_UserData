@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo yum install amazon-cloudwatch-agent
+sudo yum install amazon-cloudwatch-agent -y
 
 sudo cd /opt/aws/amazon-cloudwatch-agent/etc/
 sudo wget https://raw.githubusercontent.com/JeremyKuah/SmartBank_UserData/main/amazon-cloudwatch-agent.json
