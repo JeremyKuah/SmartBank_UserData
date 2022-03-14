@@ -1,9 +1,9 @@
 #!/bin/bash
 sudo yum install amazon-cloudwatch-agent -y
 
-sudo cd /opt/aws/amazon-cloudwatch-agent/etc/
 sudo wget https://raw.githubusercontent.com/JeremyKuah/SmartBank_UserData/main/amazon-cloudwatch-agent.json
 sudo chmod 777 amazon-cloudwatch-agent.json
+sudo mv amazon-cloudwatch-agent.json /opt/aws/amazon-cloudwatch-agent/etc/
 
 sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -s -c file:/opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.json
 sudo /bin/systemctl start amazon-cloudwatch-agent
